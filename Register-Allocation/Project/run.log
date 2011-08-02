@@ -1,0 +1,2860 @@
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $31 s1 
+Instruction 	move	s3,$31
+LIVERANGE:  $31 s1 s2 
+Instruction 	move	s4,s1
+LIVERANGE:  s1 s2 s3 
+Instruction 	beq	s1,$0,$L24
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 
+Instruction 	lw	s5,%gp_rel(crc.2871)($28)
+LIVERANGE:  s2 s3 s4 
+Instruction 	beq	s2,$0,$L22
+LIVERANGE:  s2 s3 s4 s5 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 
+Instruction 	lui	s6,%hi(crc_32_tab)
+LIVERANGE:  s2 s3 s4 s5 
+Instruction 	addiu	s7,s6,%lo(crc_32_tab)
+LIVERANGE:  s2 s3 s4 s5 s6 
+Instruction 	addiu	s8,s2,-1
+LIVERANGE:  s2 s3 s4 s5 s7 
+Instruction 	andi	s9,s8,0x3
+LIVERANGE:  s2 s3 s4 s5 s7 s8 
+Instruction 	lbu	s10,0(s4)
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s10 
+Instruction 	xor	s11,s5,s10
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s10 
+Instruction 	andi	s12,s11,0xff
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s11 
+Instruction 	sll	s13,s12,2
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s12 
+Instruction 	addu	s14,s13,s7
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s13 
+Instruction 	lw	s15,0(s14)
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s14 
+Instruction 	srl	s16,s5,8
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s15 
+Instruction 	xor	s5,s15,s16
+LIVERANGE:  s2 s3 s4 s7 s8 s9 s15 s16 
+Instruction 	addiu	s17,s4,1
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 
+Instruction 	move	s18,s8
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s17 
+Instruction 	beq	s8,$0,$L22
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s9 s17 s18 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 
+Instruction 	beq	s9,$0,$L4
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 
+Instruction 	li	s19,1			# 0x1
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 
+Instruction 	beq	s9,s19,$L19
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 s19 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 
+Instruction 	li	s20,2			# 0x2
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 
+Instruction 	beq	s9,s20,$L20
+LIVERANGE:  s2 s3 s4 s5 s7 s9 s17 s18 s20 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s17 s18 
+Instruction 	lbu	s21,1(s4)
+LIVERANGE:  s2 s3 s4 s5 s7 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s21 
+Instruction 	xor	s22,s5,s21
+LIVERANGE:  s2 s3 s4 s5 s7 s21 
+Instruction 	andi	s23,s22,0xff
+LIVERANGE:  s2 s3 s4 s5 s7 s22 
+Instruction 	sll	s24,s23,2
+LIVERANGE:  s2 s3 s4 s5 s7 s23 
+Instruction 	addu	s25,s24,s7
+LIVERANGE:  s2 s3 s4 s5 s7 s24 
+Instruction 	lw	s26,0(s25)
+LIVERANGE:  s2 s3 s4 s5 s7 s25 
+Instruction 	srl	s27,s5,8
+LIVERANGE:  s2 s3 s4 s5 s7 s26 
+Instruction 	xor	s5,s26,s27
+LIVERANGE:  s2 s3 s4 s7 s26 s27 
+Instruction 	addiu	s17,s4,2
+LIVERANGE:  s2 s3 s4 s5 s7 
+Instruction 	addiu	s18,s2,-2
+LIVERANGE:  s2 s3 s5 s7 s17 
+Instruction 	lbu	s28,0(s17)
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	nop
+LIVERANGE:  s3 s5 s7 s17 s18 s28 
+Instruction 	xor	s29,s5,s28
+LIVERANGE:  s3 s5 s7 s17 s18 s28 
+Instruction 	andi	s30,s29,0xff
+LIVERANGE:  s3 s5 s7 s17 s18 s29 
+Instruction 	sll	s31,s30,2
+LIVERANGE:  s3 s5 s7 s17 s18 s30 
+Instruction 	addu	s32,s31,s7
+LIVERANGE:  s3 s5 s7 s17 s18 s31 
+Instruction 	lw	s33,0(s32)
+LIVERANGE:  s3 s5 s7 s17 s18 s32 
+Instruction 	srl	s34,s5,8
+LIVERANGE:  s3 s5 s7 s17 s18 s33 
+Instruction 	xor	s5,s33,s34
+LIVERANGE:  s3 s7 s17 s18 s33 s34 
+Instruction 	addiu	s17,s17,1
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	addiu	s18,s18,-1
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	lbu	s35,0(s17)
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	nop
+LIVERANGE:  s3 s5 s7 s17 s18 s35 
+Instruction 	xor	s36,s5,s35
+LIVERANGE:  s3 s5 s7 s17 s18 s35 
+Instruction 	andi	s37,s36,0xff
+LIVERANGE:  s3 s5 s7 s17 s18 s36 
+Instruction 	sll	s38,s37,2
+LIVERANGE:  s3 s5 s7 s17 s18 s37 
+Instruction 	addu	s39,s38,s7
+LIVERANGE:  s3 s5 s7 s17 s18 s38 
+Instruction 	lw	s40,0(s39)
+LIVERANGE:  s3 s5 s7 s17 s18 s39 
+Instruction 	srl	s41,s5,8
+LIVERANGE:  s3 s5 s7 s17 s18 s40 
+Instruction 	xor	s5,s40,s41
+LIVERANGE:  s3 s7 s17 s18 s40 s41 
+Instruction 	addiu	s17,s17,1
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	addiu	s18,s18,-1
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	beq	s18,$0,$L22
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	nop
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	lbu	s42,0(s17)
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	nop
+LIVERANGE:  s3 s5 s7 s17 s18 s42 
+Instruction 	xor	s43,s5,s42
+LIVERANGE:  s3 s5 s7 s17 s18 s42 
+Instruction 	andi	s44,s43,0xff
+LIVERANGE:  s3 s5 s7 s17 s18 s43 
+Instruction 	sll	s45,s44,2
+LIVERANGE:  s3 s5 s7 s17 s18 s44 
+Instruction 	addu	s46,s45,s7
+LIVERANGE:  s3 s5 s7 s17 s18 s45 
+Instruction 	lw	s47,0(s46)
+LIVERANGE:  s3 s5 s7 s17 s18 s46 
+Instruction 	srl	s48,s5,8
+LIVERANGE:  s3 s5 s7 s17 s18 s47 
+Instruction 	xor	s49,s47,s48
+LIVERANGE:  s3 s7 s17 s18 s47 s48 
+Instruction 	lbu	s50,1(s17)
+LIVERANGE:  s3 s7 s17 s18 s49 
+Instruction 	nop
+LIVERANGE:  s3 s7 s17 s18 s49 s50 
+Instruction 	xor	s51,s49,s50
+LIVERANGE:  s3 s7 s17 s18 s49 s50 
+Instruction 	andi	s52,s51,0xff
+LIVERANGE:  s3 s7 s17 s18 s49 s51 
+Instruction 	sll	s53,s52,2
+LIVERANGE:  s3 s7 s17 s18 s49 s52 
+Instruction 	addu	s54,s53,s7
+LIVERANGE:  s3 s7 s17 s18 s49 s53 
+Instruction 	lw	s55,0(s54)
+LIVERANGE:  s3 s7 s17 s18 s49 s54 
+Instruction 	srl	s56,s49,8
+LIVERANGE:  s3 s7 s17 s18 s49 s55 
+Instruction 	xor	s57,s55,s56
+LIVERANGE:  s3 s7 s17 s18 s55 s56 
+Instruction 	lbu	s58,2(s17)
+LIVERANGE:  s3 s7 s17 s18 s57 
+Instruction 	nop
+LIVERANGE:  s3 s7 s17 s18 s57 s58 
+Instruction 	xor	s59,s57,s58
+LIVERANGE:  s3 s7 s17 s18 s57 s58 
+Instruction 	andi	s60,s59,0xff
+LIVERANGE:  s3 s7 s17 s18 s57 s59 
+Instruction 	sll	s61,s60,2
+LIVERANGE:  s3 s7 s17 s18 s57 s60 
+Instruction 	addu	s62,s61,s7
+LIVERANGE:  s3 s7 s17 s18 s57 s61 
+Instruction 	lw	s63,0(s62)
+LIVERANGE:  s3 s7 s17 s18 s57 s62 
+Instruction 	srl	s64,s57,8
+LIVERANGE:  s3 s7 s17 s18 s57 s63 
+Instruction 	xor	s65,s63,s64
+LIVERANGE:  s3 s7 s17 s18 s63 s64 
+Instruction 	lbu	s66,3(s17)
+LIVERANGE:  s3 s7 s17 s18 s65 
+Instruction 	nop
+LIVERANGE:  s3 s7 s17 s18 s65 s66 
+Instruction 	xor	s67,s65,s66
+LIVERANGE:  s3 s7 s17 s18 s65 s66 
+Instruction 	andi	s68,s67,0xff
+LIVERANGE:  s3 s7 s17 s18 s65 s67 
+Instruction 	sll	s69,s68,2
+LIVERANGE:  s3 s7 s17 s18 s65 s68 
+Instruction 	addu	s70,s69,s7
+LIVERANGE:  s3 s7 s17 s18 s65 s69 
+Instruction 	lw	s71,0(s70)
+LIVERANGE:  s3 s7 s17 s18 s65 s70 
+Instruction 	srl	s72,s65,8
+LIVERANGE:  s3 s7 s17 s18 s65 s71 
+Instruction 	xor	s5,s71,s72
+LIVERANGE:  s3 s7 s17 s18 s71 s72 
+Instruction 	addiu	s17,s17,4
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	addiu	s18,s18,-4
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	bne	s18,$0,$L4
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	nop
+LIVERANGE:  s3 s5 s7 s17 s18 
+Instruction 	nor	s73,$0,s5
+LIVERANGE:  s3 s5 
+Instruction 	sw	s5,%gp_rel(crc.2871)($28)
+LIVERANGE:  s3 s5 s73 
+Instruction 	move	$2,s73
+LIVERANGE:  s3 s73 
+Instruction 	j	s3
+LIVERANGE:  $2 s3 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	li	s74,-1			# 0xffffffffffffffff
+LIVERANGE:  s3 
+Instruction 	move	s75,$0
+LIVERANGE:  s3 s74 
+Instruction 	sw	s74,%gp_rel(crc.2871)($28)
+LIVERANGE:  s3 s74 s75 
+Instruction 	move	$2,s75
+LIVERANGE:  s3 s75 
+Instruction 	j	s3
+LIVERANGE:  $2 s3 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	move	s1,$31
+LIVERANGE:  $31 
+Instruction 	sw	$0,%gp_rel(outcnt)($28)
+LIVERANGE:  s1 
+Instruction 	sw	$0,%gp_rel(inptr)($28)
+LIVERANGE:  s1 
+Instruction 	sw	$0,%gp_rel(insize)($28)
+LIVERANGE:  s1 
+Instruction 	sw	$0,%gp_rel(bytes_out)($28)
+LIVERANGE:  s1 
+Instruction 	sw	$0,%gp_rel(bytes_in)($28)
+LIVERANGE:  s1 
+Instruction 	j	s1
+LIVERANGE:  s1 
+Instruction 	nop
+LIVERANGE:  
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $6 $7 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $6 $7 $31 s1 
+Instruction 	move	s3,$6
+LIVERANGE:  $6 $7 $31 s1 s2 
+Instruction 	move	s4,$7
+LIVERANGE:  $7 $31 s1 s2 s3 
+Instruction 	move	s5,$31
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	addiu	$sp,$sp,-32
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	move	s6,s3
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	beq	s2,$0,$L28
+LIVERANGE:  s1 s2 s3 s4 s6 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s4 s6 
+Instruction 	li	s3,2097152			# 0x200000
+LIVERANGE:  s1 s2 s4 s6 
+Instruction 	ori	s7,s3,0xc49b
+LIVERANGE:  s1 s2 s3 s4 s6 
+Instruction 	slt	s8,s2,s7
+LIVERANGE:  s1 s2 s3 s4 s6 s7 
+Instruction 	beq	s8,$0,$L29
+LIVERANGE:  s1 s2 s3 s4 s6 s8 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s4 s6 
+Instruction 	sll	s9,s1,2
+LIVERANGE:  s1 s2 s3 s6 
+Instruction 	sll	s10,s1,7
+LIVERANGE:  s1 s2 s3 s6 s9 
+Instruction 	subu	s11,s10,s9
+LIVERANGE:  s1 s2 s3 s6 s9 s10 
+Instruction 	addu	s4,s11,s1
+LIVERANGE:  s1 s2 s3 s6 s11 
+Instruction 	sll	s12,s4,3
+LIVERANGE:  s2 s3 s4 s6 
+Instruction 	bne	s2,$0,1f
+LIVERANGE:  s2 s3 s4 s6 s12 
+Instruction 	div	$0,s12,s2
+LIVERANGE:  s2 s3 s4 s6 s12 
+Instruction 	break	7
+LIVERANGE:  
+Instruction 	mflo	s13
+LIVERANGE:  s3 s4 s6 
+Instruction 	bgez	s13,$L35
+LIVERANGE:  s3 s4 s6 s13 
+Instruction 	nop
+LIVERANGE:  s3 s4 s6 s13 
+Instruction 	li	s14,45			# 0x2d
+LIVERANGE:  s3 s4 s6 s13 
+Instruction 	move	s15,s6
+LIVERANGE:  s3 s4 s6 s13 s14 
+Instruction 	move	$4,s14
+LIVERANGE:  s3 s4 s6 s13 s14 s15 
+Instruction 	move	$5,s15
+LIVERANGE:  $4 s3 s4 s6 s13 s15 
+Instruction 	move	$6,s3
+LIVERANGE:  $4 $5 s3 s4 s6 s13 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s4 s6 s13 
+Instruction 	jal	_IO_putc
+LIVERANGE:  $4 $5 $6 $7 s6 s13 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s6 s13 
+Instruction 	subu	s16,$0,s13
+LIVERANGE:  s6 s13 
+Instruction 	li	s17,10			# 0xa
+LIVERANGE:  s6 s16 
+Instruction 	bne	s17,$0,1f
+LIVERANGE:  s6 s16 s17 
+Instruction 	div	$0,s16,s17
+LIVERANGE:  s6 s16 s17 
+Instruction 	break	7
+LIVERANGE:  
+Instruction 	mfhi	s18
+LIVERANGE:  s6 
+Instruction 	mflo	s19
+LIVERANGE:  s6 s18 
+Instruction 	move	s20,s6
+LIVERANGE:  s6 s18 s19 
+Instruction 	lui	s21,%hi($LC0)
+LIVERANGE:  s18 s19 
+Instruction 	addiu	s22,s21,%lo($LC0)
+LIVERANGE:  s18 s19 s21 
+Instruction 	move	s23,s19
+LIVERANGE:  s18 s19 
+Instruction 	move	s24,s18
+LIVERANGE:  s18 
+Instruction 	addiu	$sp,$sp,32
+LIVERANGE:  
+Instruction 	j	fprintf
+LIVERANGE:  
+Instruction 	nop
+LIVERANGE:  
+Instruction 	move	s25,$0
+LIVERANGE:  s3 s4 s6 
+Instruction 	move	s26,$0
+LIVERANGE:  s3 s4 s6 s25 
+Instruction 	li	s27,32			# 0x20
+LIVERANGE:  s3 s4 s6 s25 s26 
+Instruction 	move	s28,s6
+LIVERANGE:  s3 s4 s6 s25 s26 s27 
+Instruction 	move	$4,s27
+LIVERANGE:  s3 s4 s6 s25 s26 s27 s28 
+Instruction 	move	$5,s28
+LIVERANGE:  $4 s3 s4 s6 s25 s26 s28 
+Instruction 	move	$6,s3
+LIVERANGE:  $4 $5 s3 s4 s6 s25 s26 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s4 s6 s25 s26 
+Instruction 	jal	_IO_putc
+LIVERANGE:  $4 $5 $6 $7 s6 s25 s26 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s6 s25 s26 
+Instruction 	move	s29,s6
+LIVERANGE:  s6 s25 s26 
+Instruction 	lui	s30,%hi($LC0)
+LIVERANGE:  s25 s26 
+Instruction 	addiu	s31,s30,%lo($LC0)
+LIVERANGE:  s25 s26 s30 
+Instruction 	move	s32,s25
+LIVERANGE:  s25 s26 
+Instruction 	move	s33,s26
+LIVERANGE:  s26 
+Instruction 	addiu	$sp,$sp,32
+LIVERANGE:  
+Instruction 	j	fprintf
+LIVERANGE:  
+Instruction 	nop
+LIVERANGE:  
+Instruction 	li	s34,1000			# 0x3e8
+LIVERANGE:  s1 s2 s3 s4 s6 
+Instruction 	bne	s34,$0,1f
+LIVERANGE:  s1 s2 s3 s4 s6 s34 
+Instruction 	div	$0,s2,s34
+LIVERANGE:  s1 s2 s3 s4 s6 s34 
+Instruction 	break	7
+LIVERANGE:  
+Instruction 	mflo	s35
+LIVERANGE:  s1 s3 s4 s6 
+Instruction 	bne	s35,$0,1f
+LIVERANGE:  s1 s3 s4 s6 s35 
+Instruction 	div	$0,s1,s35
+LIVERANGE:  s1 s3 s4 s6 s35 
+Instruction 	break	7
+LIVERANGE:  
+Instruction 	mflo	s13
+LIVERANGE:  s3 s4 s6 
+Instruction 	bltz	s13,$L31
+LIVERANGE:  s3 s4 s6 s13 
+Instruction 	nop
+LIVERANGE:  s3 s4 s6 s13 
+Instruction 	li	s36,10			# 0xa
+LIVERANGE:  s3 s4 s6 s13 
+Instruction 	bne	s36,$0,1f
+LIVERANGE:  s3 s4 s6 s13 s36 
+Instruction 	div	$0,s13,s36
+LIVERANGE:  s3 s4 s6 s13 s36 
+Instruction 	break	7
+LIVERANGE:  
+Instruction 	mfhi	s26
+LIVERANGE:  s3 s4 s6 
+Instruction 	mflo	s25
+LIVERANGE:  s3 s4 s6 s26 
+Instruction 	j	$L32
+LIVERANGE:  s3 s4 s6 s25 s26 
+Instruction 	nop
+LIVERANGE:  s3 s4 s6 s25 s26 
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $31 s1 
+Instruction 	move	s3,$31
+LIVERANGE:  $31 s1 s2 
+Instruction 	addiu	$sp,$sp,-32
+LIVERANGE:  s1 s2 s3 
+Instruction 	lw	s4,%gp_rel(quiet)($28)
+LIVERANGE:  s1 s2 s3 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	beq	s4,$0,$L40
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	lw	s5,%gp_rel(exit_code)($28)
+LIVERANGE:  s3 s4 
+Instruction 	nop
+LIVERANGE:  s3 s4 s5 
+Instruction 	bne	s5,$0,$L39
+LIVERANGE:  s3 s4 s5 
+Instruction 	nop
+LIVERANGE:  s3 s4 
+Instruction 	li	s6,2			# 0x2
+LIVERANGE:  s3 s4 
+Instruction 	sw	s6,%gp_rel(exit_code)($28)
+LIVERANGE:  s3 s4 s6 
+Instruction 	addiu	$sp,$sp,32
+LIVERANGE:  s3 s4 
+Instruction 	move	$2,s4
+LIVERANGE:  s3 s4 
+Instruction 	j	s3
+LIVERANGE:  $2 s3 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	sw	s1,16($sp)
+LIVERANGE:  s1 s2 s3 
+Instruction 	sw	s2,20($sp)
+LIVERANGE:  s2 s3 
+Instruction 	lw	s7,%gp_rel(stderr)($28)
+LIVERANGE:  s3 
+Instruction 	lui	s8,%hi($LC1)
+LIVERANGE:  s3 s7 
+Instruction 	addiu	s9,s8,%lo($LC1)
+LIVERANGE:  s3 s7 s8 
+Instruction 	lw	s10,%gp_rel(progname)($28)
+LIVERANGE:  s3 s7 s9 
+Instruction 	lui	s11,%hi(ifname)
+LIVERANGE:  s3 s7 s9 s10 
+Instruction 	addiu	s12,s11,%lo(ifname)
+LIVERANGE:  s3 s7 s9 s10 s11 
+Instruction 	move	$4,s7
+LIVERANGE:  s3 s7 s9 s10 s12 
+Instruction 	move	$5,s9
+LIVERANGE:  $4 s3 s9 s10 s12 
+Instruction 	move	$6,s10
+LIVERANGE:  $4 $5 s3 s10 s12 
+Instruction 	move	$7,s12
+LIVERANGE:  $4 $5 $6 s3 s12 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 $7 s3 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s3 
+Instruction 	move	s4,$2
+LIVERANGE:  $2 s3 
+Instruction 	j	$L37
+LIVERANGE:  s3 s4 
+Instruction 	nop
+LIVERANGE:  s3 s4 
+Instruction 	move	s1,$7
+LIVERANGE:  $7 $31 
+Instruction 	move	s2,$31
+LIVERANGE:  $31 s1 
+Instruction 	addiu	$sp,$sp,-24
+LIVERANGE:  s1 
+Instruction 	lw	s3,%gp_rel(stderr)($28)
+LIVERANGE:  s1 
+Instruction 	lui	s4,%hi($LC2)
+LIVERANGE:  s1 s3 
+Instruction 	addiu	s5,s4,%lo($LC2)
+LIVERANGE:  s1 s3 s4 
+Instruction 	lw	s6,%gp_rel(progname)($28)
+LIVERANGE:  s1 s3 s5 
+Instruction 	move	$4,s3
+LIVERANGE:  s1 s3 s5 s6 
+Instruction 	move	$5,s5
+LIVERANGE:  $4 s1 s5 s6 
+Instruction 	move	$6,s6
+LIVERANGE:  $4 $5 s1 s6 
+Instruction 	move	$7,s1
+LIVERANGE:  $4 $5 $6 s1 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 $7 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 
+Instruction 	lui	s7,%hi(ofname)
+LIVERANGE:  
+Instruction 	addiu	s8,s7,%lo(ofname)
+LIVERANGE:  s7 
+Instruction 	move	$4,s8
+LIVERANGE:  s8 
+Instruction 	jal	perror
+LIVERANGE:  $4 
+Instruction 	nop
+LIVERANGE:  $4 
+Instruction 	addiu	$sp,$sp,24
+LIVERANGE:  
+Instruction 	j	abort_gzip
+LIVERANGE:  
+Instruction 	nop
+LIVERANGE:  
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $31 
+Instruction 	move	s2,$31
+LIVERANGE:  $31 s1 
+Instruction 	addiu	$sp,$sp,-32
+LIVERANGE:  s1 
+Instruction 	sw	s1,16($sp)
+LIVERANGE:  $sp s1 
+Instruction 	lw	s3,%gp_rel(stderr)($28)
+LIVERANGE:  
+Instruction 	lui	s4,%hi($LC3)
+LIVERANGE:  s3 
+Instruction 	addiu	s5,s4,%lo($LC3)
+LIVERANGE:  s3 s4 
+Instruction 	lw	s6,%gp_rel(progname)($28)
+LIVERANGE:  s3 s5 
+Instruction 	lui	s7,%hi(ifname)
+LIVERANGE:  s3 s5 s6 
+Instruction 	addiu	s8,s7,%lo(ifname)
+LIVERANGE:  s3 s5 s6 s7 
+Instruction 	move	$4,s3
+LIVERANGE:  s3 s5 s6 s8 
+Instruction 	move	$5,s5
+LIVERANGE:  $4 s5 s6 s8 
+Instruction 	move	$6,s6
+LIVERANGE:  $4 $5 s6 s8 
+Instruction 	move	$7,s8
+LIVERANGE:  $4 $5 $6 s8 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 $7 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 
+Instruction 	addiu	$sp,$sp,32
+LIVERANGE:  
+Instruction 	j	abort_gzip
+LIVERANGE:  
+Instruction 	nop
+LIVERANGE:  
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $6 $7 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $6 $7 $31 s1 
+Instruction 	move	s3,$6
+LIVERANGE:  $6 $7 $31 s1 s2 
+Instruction 	move	s4,$7
+LIVERANGE:  $7 $31 s1 s2 s3 
+Instruction 	move	s5,$31
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	addiu	$sp,$sp,-24
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	$4,s1
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	$5,s2
+LIVERANGE:  $4 s2 s3 s4 s5 
+Instruction 	move	$6,s3
+LIVERANGE:  $4 $5 s3 s4 s5 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s4 s5 
+Instruction 	jal	malloc
+LIVERANGE:  $4 $5 $6 $7 s5 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 
+Instruction 	move	s6,$2
+LIVERANGE:  $2 s5 
+Instruction 	move	s7,s6
+LIVERANGE:  s5 s6 
+Instruction 	beq	s6,$0,$L48
+LIVERANGE:  s5 s6 s7 
+Instruction 	nop
+LIVERANGE:  s5 s7 
+Instruction 	move	s8,s7
+LIVERANGE:  s5 s7 
+Instruction 	addiu	$sp,$sp,24
+LIVERANGE:  s5 s8 
+Instruction 	move	$2,s8
+LIVERANGE:  s5 s8 
+Instruction 	j	s5
+LIVERANGE:  $2 s5 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	lui	s9,%hi($LC4)
+LIVERANGE:  s5 s7 
+Instruction 	addiu	s10,s9,%lo($LC4)
+LIVERANGE:  s5 s7 s9 
+Instruction 	move	$4,s10
+LIVERANGE:  s5 s7 s10 
+Instruction 	jal	error
+LIVERANGE:  $4 s5 s7 
+Instruction 	nop
+LIVERANGE:  $4 s5 s7 
+Instruction 	j	$L46
+LIVERANGE:  s5 s7 
+Instruction 	nop
+LIVERANGE:  s5 s7 
+Instruction 	move	s1,$7
+LIVERANGE:  $7 $31 
+Instruction 	move	s2,$31
+LIVERANGE:  $31 s1 
+Instruction 	addiu	$sp,$sp,-24
+LIVERANGE:  s1 
+Instruction 	lw	s3,%gp_rel(stderr)($28)
+LIVERANGE:  s1 
+Instruction 	lui	s4,%hi($LC2)
+LIVERANGE:  s1 s3 
+Instruction 	addiu	s5,s4,%lo($LC2)
+LIVERANGE:  s1 s3 s4 
+Instruction 	lw	s6,%gp_rel(progname)($28)
+LIVERANGE:  s1 s3 s5 
+Instruction 	move	$4,s3
+LIVERANGE:  s1 s3 s5 s6 
+Instruction 	move	$5,s5
+LIVERANGE:  $4 s1 s5 s6 
+Instruction 	move	$6,s6
+LIVERANGE:  $4 $5 s1 s6 
+Instruction 	move	$7,s1
+LIVERANGE:  $4 $5 $6 s1 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 $7 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 
+Instruction 	jal	__errno_location
+LIVERANGE:  
+Instruction 	nop
+LIVERANGE:  
+Instruction 	move	s7,$2
+LIVERANGE:  $2 
+Instruction 	lw	s8,0(s7)
+LIVERANGE:  s7 
+Instruction 	nop
+LIVERANGE:  s8 
+Instruction 	bne	s8,$0,$L53
+LIVERANGE:  s8 
+Instruction 	nop
+LIVERANGE:  
+Instruction 	lw	s9,%gp_rel(stderr)($28)
+LIVERANGE:  
+Instruction 	lui	s10,%hi($LC5)
+LIVERANGE:  s9 
+Instruction 	addiu	s11,s10,%lo($LC5)
+LIVERANGE:  s9 s10 
+Instruction 	lui	s12,%hi(ifname)
+LIVERANGE:  s9 s11 
+Instruction 	addiu	s13,s12,%lo(ifname)
+LIVERANGE:  s9 s11 s12 
+Instruction 	move	$4,s9
+LIVERANGE:  s9 s11 s13 
+Instruction 	move	$5,s11
+LIVERANGE:  $4 s11 s13 
+Instruction 	move	$6,s13
+LIVERANGE:  $4 $5 s13 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 
+Instruction 	addiu	$sp,$sp,24
+LIVERANGE:  
+Instruction 	j	abort_gzip
+LIVERANGE:  
+Instruction 	nop
+LIVERANGE:  
+Instruction 	lui	s14,%hi(ifname)
+LIVERANGE:  
+Instruction 	addiu	s15,s14,%lo(ifname)
+LIVERANGE:  s14 
+Instruction 	move	$4,s15
+LIVERANGE:  s15 
+Instruction 	jal	perror
+LIVERANGE:  $4 
+Instruction 	nop
+LIVERANGE:  $4 
+Instruction 	addiu	$sp,$sp,24
+LIVERANGE:  
+Instruction 	j	abort_gzip
+LIVERANGE:  
+Instruction 	nop
+LIVERANGE:  
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $6 $7 $31 
+Instruction 	move	s2,$6
+LIVERANGE:  $6 $7 $31 s1 
+Instruction 	move	s3,$7
+LIVERANGE:  $7 $31 s1 s2 
+Instruction 	move	s4,$31
+LIVERANGE:  $31 s1 s2 s3 
+Instruction 	addiu	$sp,$sp,-24
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	move	s5,s1
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	li	s6,46			# 0x2e
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	$4,s1
+LIVERANGE:  s1 s2 s3 s4 s5 s6 
+Instruction 	move	$5,s6
+LIVERANGE:  $4 s2 s3 s4 s5 s6 
+Instruction 	move	$6,s2
+LIVERANGE:  $4 $5 s2 s3 s4 s5 
+Instruction 	move	$7,s3
+LIVERANGE:  $4 $5 $6 s3 s4 s5 
+Instruction 	jal	strrchr
+LIVERANGE:  $4 $5 $6 $7 s4 s5 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s4 s5 
+Instruction 	move	s7,$2
+LIVERANGE:  $2 s4 s5 
+Instruction 	move	s8,s7
+LIVERANGE:  s4 s5 s7 
+Instruction 	beq	s7,$0,$L58
+LIVERANGE:  s4 s5 s7 s8 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s8 
+Instruction 	beq	s7,s5,$L113
+LIVERANGE:  s4 s5 s7 s8 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s8 
+Instruction 	li	s9,46			# 0x2e
+LIVERANGE:  s4 s5 s8 
+Instruction 	li	s10,95
+LIVERANGE:  s4 s5 s8 s9 
+Instruction 	subu	s11,s5,s8
+LIVERANGE:  s4 s5 s8 s9 s10 
+Instruction 	nor	s12,$0,s11
+LIVERANGE:  s4 s5 s8 s9 s10 s11 
+Instruction 	andi	s13,s12,0x7
+LIVERANGE:  s4 s5 s8 s9 s10 s12 
+Instruction 	addiu	s14,s8,-1
+LIVERANGE:  s4 s5 s8 s9 s10 s13 
+Instruction 	lb	s7,-1(s8)
+LIVERANGE:  s4 s5 s8 s9 s10 s13 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s8 s9 s10 s13 s14 
+Instruction 	beq	s7,s9,$L114
+LIVERANGE:  s4 s5 s7 s8 s9 s10 s13 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s8 s9 s10 s13 s14 
+Instruction 	beq	s14,s5,$L58
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	beq	s13,$0,$L59
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	li	s15,1			# 0x1
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	beq	s13,s15,$L100
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 s15 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	li	s16,2			# 0x2
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	beq	s13,s16,$L101
+LIVERANGE:  s4 s5 s9 s10 s13 s14 s16 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	li	s17,3			# 0x3
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	beq	s13,s17,$L102
+LIVERANGE:  s4 s5 s9 s10 s13 s14 s17 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	li	s18,4			# 0x4
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	beq	s13,s18,$L103
+LIVERANGE:  s4 s5 s9 s10 s13 s14 s18 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	li	s19,5			# 0x5
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	beq	s13,s19,$L104
+LIVERANGE:  s4 s5 s9 s10 s13 s14 s19 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	li	s20,6			# 0x6
+LIVERANGE:  s4 s5 s9 s10 s13 s14 
+Instruction 	beq	s13,s20,$L105
+LIVERANGE:  s4 s5 s9 s10 s13 s14 s20 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	addiu	s14,s14,-1
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	lb	s21,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 s21 
+Instruction 	beq	s21,s9,$L115
+LIVERANGE:  s4 s5 s9 s10 s14 s21 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	addiu	s14,s14,-1
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	lb	s22,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 s22 
+Instruction 	beq	s22,s9,$L116
+LIVERANGE:  s4 s5 s9 s10 s14 s22 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	addiu	s14,s14,-1
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	lb	s23,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 s23 
+Instruction 	bne	s23,s9,$L103
+LIVERANGE:  s4 s5 s9 s10 s14 s23 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	sb	s10,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	addiu	s14,s14,-1
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	lb	s24,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 s24 
+Instruction 	beq	s24,s9,$L117
+LIVERANGE:  s4 s5 s9 s10 s14 s24 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	addiu	s14,s14,-1
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	lb	s25,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 s25 
+Instruction 	beq	s25,s9,$L118
+LIVERANGE:  s4 s5 s9 s10 s14 s25 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	addiu	s14,s14,-1
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	lb	s7,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	beq	s7,s9,$L119
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	addiu	s14,s14,-1
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	lb	s26,0(s14)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s26 
+Instruction 	beq	s26,s9,$L120
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s26 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	beq	s14,s5,$L58
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	addiu	s27,s14,-1
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	lb	s28,-1(s14)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 s28 
+Instruction 	beq	s28,s9,$L121
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 s28 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	lb	s29,-1(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s29 
+Instruction 	beq	s29,s9,$L122
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s29 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s30,-2(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s30 
+Instruction 	beq	s30,s9,$L123
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s30 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s31,-3(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s31 
+Instruction 	beq	s31,s9,$L124
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s31 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s32,-4(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s32 
+Instruction 	beq	s32,s9,$L125
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s32 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s33,-5(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s33 
+Instruction 	beq	s33,s9,$L126
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s33 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s34,-6(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s34 
+Instruction 	beq	s34,s9,$L127
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s34 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	addiu	s14,s27,-7
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s35,-7(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 s35 
+Instruction 	bne	s35,s9,$L96
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 s35 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	sb	s10,-7(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	bne	s14,s5,$L59
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	addiu	$sp,$sp,24
+LIVERANGE:  s4 s7 
+Instruction 	move	$2,s7
+LIVERANGE:  s4 s7 
+Instruction 	j	s4
+LIVERANGE:  $2 s4 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	sb	s10,-1(s8)
+LIVERANGE:  s4 s5 s7 s8 s9 s10 s13 s14 
+Instruction 	j	$L61
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s13 s14 
+Instruction 	sb	s10,0(s14)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	j	$L96
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	sb	s10,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	j	$L104
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	sb	s10,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	j	$L105
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	sb	s10,0(s14)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	j	$L100
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 
+Instruction 	sb	s10,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	j	$L101
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	sb	s10,0(s14)
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	j	$L102
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	nop
+LIVERANGE:  s4 s5 s9 s10 s14 
+Instruction 	sb	s10,-1(s14)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	lb	s36,-1(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s36 
+Instruction 	bne	s36,s9,$L106
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s36 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	sb	s10,-1(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s37,-2(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s37 
+Instruction 	bne	s37,s9,$L107
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s37 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	sb	s10,-2(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s38,-3(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s38 
+Instruction 	bne	s38,s9,$L108
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s38 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	sb	s10,-3(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s39,-4(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s39 
+Instruction 	bne	s39,s9,$L109
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s39 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	sb	s10,-4(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s40,-5(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s40 
+Instruction 	bne	s40,s9,$L110
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s40 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	sb	s10,-5(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s41,-6(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s41 
+Instruction 	bne	s41,s9,$L111
+LIVERANGE:  s4 s5 s7 s9 s10 s27 s41 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	sb	s10,-6(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	addiu	s14,s27,-7
+LIVERANGE:  s4 s5 s7 s9 s10 s27 
+Instruction 	lb	s42,-7(s27)
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 s42 
+Instruction 	bne	s42,s9,$L96
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 s42 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	j	$L128
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 s9 s10 s14 s27 
+Instruction 	addiu	s8,s7,1
+LIVERANGE:  s4 s5 s7 
+Instruction 	j	$L56
+LIVERANGE:  s4 s5 s8 
+Instruction 	nop
+LIVERANGE:  s4 s5 s8 
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $6 $7 $31 
+Instruction 	move	s2,$6
+LIVERANGE:  $6 $7 $31 s1 
+Instruction 	move	s3,$7
+LIVERANGE:  $7 $31 s1 s2 
+Instruction 	move	s4,$31
+LIVERANGE:  $31 s1 s2 s3 
+Instruction 	addiu	$sp,$sp,-24
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	move	s5,s1
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	li	s6,47			# 0x2f
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	$4,s1
+LIVERANGE:  s1 s2 s3 s4 s5 s6 
+Instruction 	move	$5,s6
+LIVERANGE:  $4 s2 s3 s4 s5 s6 
+Instruction 	move	$6,s2
+LIVERANGE:  $4 $5 s2 s3 s4 s5 
+Instruction 	move	$7,s3
+LIVERANGE:  $4 $5 $6 s3 s4 s5 
+Instruction 	jal	strrchr
+LIVERANGE:  $4 $5 $6 $7 s4 s5 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s4 s5 
+Instruction 	move	s7,$2
+LIVERANGE:  $2 s4 s5 
+Instruction 	beq	s7,$0,$L130
+LIVERANGE:  s4 s5 s7 
+Instruction 	nop
+LIVERANGE:  s4 s5 s7 
+Instruction 	addiu	s5,s7,1
+LIVERANGE:  s4 s7 
+Instruction 	move	s8,s5
+LIVERANGE:  s4 s5 
+Instruction 	addiu	$sp,$sp,24
+LIVERANGE:  s4 s8 
+Instruction 	move	$2,s8
+LIVERANGE:  s4 s8 
+Instruction 	j	s4
+LIVERANGE:  $2 s4 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $6 $7 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $6 $7 $31 s1 
+Instruction 	move	s3,$6
+LIVERANGE:  $6 $7 $31 s1 s2 
+Instruction 	move	s4,$7
+LIVERANGE:  $7 $31 s1 s2 s3 
+Instruction 	move	s5,$31
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	addiu	$sp,$sp,-32
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	s6,s1
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	lb	s7,0(s1)
+LIVERANGE:  s1 s2 s3 s4 s5 s6 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s7 
+Instruction 	beq	s7,$0,$L133
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s7 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s7 
+Instruction 	move	$4,s1
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s7 
+Instruction 	move	$5,s2
+LIVERANGE:  $4 s2 s3 s4 s5 s6 s7 
+Instruction 	move	$6,s3
+LIVERANGE:  $4 $5 s3 s4 s5 s6 s7 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s4 s5 s6 s7 
+Instruction 	jal	__ctype_b_loc
+LIVERANGE:  $4 $5 $6 $7 s5 s6 s7 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 s6 s7 
+Instruction 	move	s8,$2
+LIVERANGE:  $2 s5 s6 s7 
+Instruction 	move	s9,s8
+LIVERANGE:  s5 s6 s7 s8 
+Instruction 	move	s10,s6
+LIVERANGE:  s5 s6 s7 s9 
+Instruction 	lw	s11,0(s9)
+LIVERANGE:  s5 s6 s7 s9 s10 
+Instruction 	sll	s12,s7,1
+LIVERANGE:  s5 s6 s7 s9 s10 s11 
+Instruction 	addu	s13,s11,s12
+LIVERANGE:  s5 s6 s7 s9 s10 s11 s12 
+Instruction 	lhu	s14,0(s13)
+LIVERANGE:  s5 s6 s7 s9 s10 s13 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s9 s10 s14 
+Instruction 	andi	s15,s14,0x1
+LIVERANGE:  s5 s6 s7 s9 s10 s14 
+Instruction 	beq	s15,$0,$L134
+LIVERANGE:  s5 s6 s7 s9 s10 s15 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s9 s10 
+Instruction 	addiu	s16,s7,32
+LIVERANGE:  s5 s6 s7 s9 s10 
+Instruction 	sll	s17,s16,24
+LIVERANGE:  s5 s6 s9 s10 s16 
+Instruction 	sra	s7,s17,24
+LIVERANGE:  s5 s6 s9 s10 s17 
+Instruction 	sb	s7,0(s10)
+LIVERANGE:  s5 s6 s7 s9 s10 
+Instruction 	addiu	s10,s10,1
+LIVERANGE:  s5 s6 s9 s10 
+Instruction 	lb	s7,0(s10)
+LIVERANGE:  s5 s6 s9 s10 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s9 s10 
+Instruction 	bne	s7,$0,$L135
+LIVERANGE:  s5 s6 s7 s9 s10 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s9 s10 
+Instruction 	move	s18,s6
+LIVERANGE:  s5 s6 
+Instruction 	addiu	$sp,$sp,32
+LIVERANGE:  s5 s18 
+Instruction 	move	$2,s18
+LIVERANGE:  s5 s18 
+Instruction 	j	s5
+LIVERANGE:  $2 s5 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $6 $7 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $6 $7 $31 s1 
+Instruction 	move	s3,$6
+LIVERANGE:  $6 $7 $31 s1 s2 
+Instruction 	move	s4,$7
+LIVERANGE:  $7 $31 s1 s2 s3 
+Instruction 	move	s5,$31
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	addiu	$sp,$sp,-40
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	s6,s1
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	sw	$0,%gp_rel(insize)($28)
+LIVERANGE:  s1 s2 s3 s4 s5 s6 
+Instruction 	move	$4,s1
+LIVERANGE:  s1 s2 s3 s4 s5 s6 
+Instruction 	move	$5,s2
+LIVERANGE:  $4 s2 s3 s4 s5 s6 
+Instruction 	move	$6,s3
+LIVERANGE:  $4 $5 s3 s4 s5 s6 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s4 s5 s6 
+Instruction 	jal	__errno_location
+LIVERANGE:  $4 $5 $6 $7 s5 s6 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 s6 
+Instruction 	move	s7,$2
+LIVERANGE:  $2 s5 s6 
+Instruction 	sw	$0,0(s7)
+LIVERANGE:  s5 s6 s7 
+Instruction 	lui	s8,%hi(inbuf)
+LIVERANGE:  s5 s6 
+Instruction 	addiu	s9,s8,%lo(inbuf)
+LIVERANGE:  s5 s6 s8 
+Instruction 	lw	s10,%gp_rel(insize)($28)
+LIVERANGE:  s5 s6 s8 s9 
+Instruction 	li	s11,32768			# 0x8000
+LIVERANGE:  s5 s6 s8 s9 s10 
+Instruction 	lw	s12,%gp_rel(ifd)($28)
+LIVERANGE:  s5 s6 s8 s9 s10 s11 s19 s20 
+Instruction 	addu	s13,s9,s10
+LIVERANGE:  s5 s6 s8 s9 s10 s11 s12 s19 s20 
+Instruction 	subu	s14,s11,s10
+LIVERANGE:  s5 s6 s8 s9 s10 s11 s12 s13 s19 s20 
+Instruction 	move	$4,s12
+LIVERANGE:  s5 s6 s8 s9 s11 s12 s13 s14 s19 s20 
+Instruction 	move	$5,s13
+LIVERANGE:  $4 s5 s6 s8 s9 s11 s13 s14 s19 s20 
+Instruction 	move	$6,s14
+LIVERANGE:  $4 $5 s5 s6 s8 s9 s11 s14 s19 s20 
+Instruction 	jal	read
+LIVERANGE:  $4 $5 $6 s5 s6 s8 s9 s11 s19 s20 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s5 s6 s8 s9 s11 s19 s20 
+Instruction 	move	s15,$2
+LIVERANGE:  $2 s5 s6 s8 s9 s11 s19 s20 
+Instruction 	move	s16,s15
+LIVERANGE:  s5 s6 s8 s9 s11 s15 s19 s20 
+Instruction 	addiu	s17,s15,1
+LIVERANGE:  s5 s6 s8 s9 s11 s15 s16 s19 s20 
+Instruction 	sltu	s18,s17,2
+LIVERANGE:  s5 s6 s8 s9 s11 s16 s17 s19 s20 
+Instruction 	bne	s18,$0,$L148
+LIVERANGE:  s5 s6 s8 s9 s11 s16 s17 s18 s19 s20 
+Instruction 	nop
+LIVERANGE:  s5 s6 s8 s9 s11 s16 s17 s19 s20 
+Instruction 	lw	s19,%gp_rel(insize)($28)
+LIVERANGE:  s5 s6 s8 s9 s11 s16 s17 
+Instruction 	nop
+LIVERANGE:  s5 s6 s8 s9 s11 s16 s17 s19 
+Instruction 	addu	s10,s16,s19
+LIVERANGE:  s5 s6 s8 s9 s11 s16 s17 s19 
+Instruction 	sw	s10,%gp_rel(insize)($28)
+LIVERANGE:  s5 s6 s8 s9 s10 s11 s17 s19 
+Instruction 	sltu	s20,s10,s11
+LIVERANGE:  s5 s6 s8 s9 s10 s11 s17 s19 
+Instruction 	bne	s20,$0,$L140
+LIVERANGE:  s5 s6 s8 s9 s10 s11 s17 s19 s20 
+Instruction 	nop
+LIVERANGE:  s5 s6 s8 s9 s10 s11 s17 s19 s20 
+Instruction 	beq	s10,$0,$L149
+LIVERANGE:  s5 s6 s8 s10 s17 s19 s20 
+Instruction 	nop
+LIVERANGE:  s5 s6 s8 s10 s17 s19 s20 
+Instruction 	lw	s21,%gp_rel(bytes_in)($28)
+LIVERANGE:  s5 s8 s10 
+Instruction 	nop
+LIVERANGE:  s5 s8 s10 s21 
+Instruction 	addu	s22,s21,s10
+LIVERANGE:  s5 s8 s10 s21 
+Instruction 	sw	s22,%gp_rel(bytes_in)($28)
+LIVERANGE:  s5 s8 s22 
+Instruction 	li	s23,1			# 0x1
+LIVERANGE:  s5 s8 
+Instruction 	sw	s23,%gp_rel(inptr)($28)
+LIVERANGE:  s5 s8 s23 
+Instruction 	lbu	s24,%lo(inbuf)(s8)
+LIVERANGE:  s5 s8 
+Instruction 	addiu	$sp,$sp,40
+LIVERANGE:  s5 s24 
+Instruction 	move	$2,s24
+LIVERANGE:  s5 s24 
+Instruction 	j	s5
+LIVERANGE:  $2 s5 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	lw	s10,%gp_rel(insize)($28)
+LIVERANGE:  s5 s6 s8 s17 s19 s20 
+Instruction 	j	$L139
+LIVERANGE:  s5 s6 s8 s10 s17 s19 s20 
+Instruction 	nop
+LIVERANGE:  s5 s6 s8 s10 s17 s19 s20 
+Instruction 	beq	s6,$0,$L142
+LIVERANGE:  s5 s6 s8 s17 s19 s20 
+Instruction 	nop
+LIVERANGE:  s5 s8 s17 s19 s20 
+Instruction 	li	s24,-1			# 0xffffffffffffffff
+LIVERANGE:  s5 
+Instruction 	j	$L143
+LIVERANGE:  s5 s24 
+Instruction 	nop
+LIVERANGE:  s5 s24 
+Instruction 	move	$4,s17
+LIVERANGE:  s5 s8 s17 s19 s20 
+Instruction 	move	$5,s20
+LIVERANGE:  $4 s5 s8 s19 s20 
+Instruction 	move	$6,s19
+LIVERANGE:  $4 $5 s5 s8 s19 
+Instruction 	jal	read_error
+LIVERANGE:  $4 $5 $6 s5 s8 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s5 s8 
+Instruction 	lw	s10,%gp_rel(insize)($28)
+LIVERANGE:  s5 s8 
+Instruction 	j	$L141
+LIVERANGE:  s5 s8 s10 
+Instruction 	nop
+LIVERANGE:  s5 s8 s10 
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $6 $7 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $6 $7 $31 s1 
+Instruction 	move	s3,$6
+LIVERANGE:  $6 $7 $31 s1 s2 
+Instruction 	move	s4,$7
+LIVERANGE:  $7 $31 s1 s2 s3 
+Instruction 	move	s5,$31
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	addiu	$sp,$sp,-48
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	s6,s1
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	s7,s2
+LIVERANGE:  s2 s3 s4 s5 s6 
+Instruction 	move	s8,s3
+LIVERANGE:  s3 s4 s5 s6 s7 
+Instruction 	li	s9,-1			# 0xffffffffffffffff
+LIVERANGE:  s4 s5 s6 s7 s8 
+Instruction 	lui	s10,%hi($LC2)
+LIVERANGE:  s4 s5 s6 s7 s8 s9 
+Instruction 	addiu	s11,s10,%lo($LC2)
+LIVERANGE:  s4 s5 s6 s7 s8 s9 s10 
+Instruction 	lui	s12,%hi(ofname)
+LIVERANGE:  s4 s5 s6 s7 s8 s9 s11 
+Instruction 	addiu	s13,s12,%lo(ofname)
+LIVERANGE:  s4 s5 s6 s7 s8 s9 s11 s12 
+Instruction 	move	s14,s6
+LIVERANGE:  s4 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	move	s15,s7
+LIVERANGE:  s4 s5 s6 s7 s8 s9 s11 s13 s14 
+Instruction 	move	s16,s8
+LIVERANGE:  s4 s5 s6 s7 s8 s9 s11 s13 s14 s15 
+Instruction 	move	$4,s14
+LIVERANGE:  s4 s5 s6 s7 s8 s9 s11 s13 s14 s15 s16 
+Instruction 	move	$5,s15
+LIVERANGE:  $4 s4 s5 s6 s7 s8 s9 s11 s13 s15 s16 
+Instruction 	move	$6,s16
+LIVERANGE:  $4 $5 s4 s5 s6 s7 s8 s9 s11 s13 s16 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s4 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 $7 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	move	s17,$2
+LIVERANGE:  $2 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	move	s18,s17
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s17 
+Instruction 	beq	s17,s8,$L155
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s17 s18 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s17 s18 
+Instruction 	beq	s18,s9,$L156
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	subu	s8,s8,s18
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	addu	s7,s7,s18
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	move	s19,s6
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 
+Instruction 	move	s20,s7
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s19 
+Instruction 	move	s21,s8
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s19 s20 
+Instruction 	move	$4,s19
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s19 s20 s21 
+Instruction 	move	$5,s20
+LIVERANGE:  $4 s5 s6 s7 s8 s9 s11 s13 s20 s21 
+Instruction 	move	$6,s21
+LIVERANGE:  $4 $5 s5 s6 s7 s8 s9 s11 s13 s21 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	move	s17,$2
+LIVERANGE:  $2 s5 s6 s7 s8 s9 s11 s13 
+Instruction 	move	s18,s17
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s17 
+Instruction 	bne	s17,s8,$L153
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s17 s18 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s17 s18 
+Instruction 	addiu	$sp,$sp,48
+LIVERANGE:  s5 s17 
+Instruction 	move	$2,s17
+LIVERANGE:  s5 s17 
+Instruction 	j	s5
+LIVERANGE:  $2 s5 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	lw	s22,%gp_rel(stderr)($28)
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	move	s23,s11
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 s22 
+Instruction 	lw	s24,%gp_rel(progname)($28)
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 s22 s23 
+Instruction 	move	$4,s22
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 s22 s23 s24 
+Instruction 	move	$5,s23
+LIVERANGE:  $4 s5 s6 s7 s8 s9 s11 s13 s18 s23 s24 
+Instruction 	move	$6,s24
+LIVERANGE:  $4 $5 s5 s6 s7 s8 s9 s11 s13 s18 s24 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	move	s25,s13
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	move	$4,s25
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 s25 
+Instruction 	jal	perror
+LIVERANGE:  $4 s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	nop
+LIVERANGE:  $4 s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	jal	abort_gzip
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	subu	s8,s8,s18
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	addu	s7,s7,s18
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 s18 
+Instruction 	j	$L157
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s9 s11 s13 
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $6 $7 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $6 $7 $31 s1 
+Instruction 	move	s3,$6
+LIVERANGE:  $6 $7 $31 s1 s2 
+Instruction 	move	s4,$7
+LIVERANGE:  $7 $31 s1 s2 s3 
+Instruction 	move	s5,$fp
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	move	s6,$31
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	addiu	$sp,$sp,-64
+LIVERANGE:  s1 s2 s3 s4 s6 
+Instruction 	move	s7,s2
+LIVERANGE:  s1 s2 s3 s4 s6 
+Instruction 	move	$4,s1
+LIVERANGE:  s1 s2 s3 s4 s6 s7 
+Instruction 	move	$5,s2
+LIVERANGE:  $4 s1 s2 s3 s4 s6 s7 
+Instruction 	move	$6,s3
+LIVERANGE:  $4 $5 s1 s3 s4 s6 s7 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s1 s4 s6 s7 
+Instruction 	jal	__errno_location
+LIVERANGE:  $4 $5 $6 $7 s1 s6 s7 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s1 s6 s7 
+Instruction 	move	s8,$2
+LIVERANGE:  $2 s1 s6 s7 
+Instruction 	sw	$0,0(s8)
+LIVERANGE:  s1 s6 s7 s8 
+Instruction 	lw	s9,%gp_rel(insize)($28)
+LIVERANGE:  s1 s6 s7 s8 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 
+Instruction 	addiu	s10,s9,-1
+LIVERANGE:  s1 s6 s7 s8 s9 
+Instruction 	sltu	s11,s10,-2
+LIVERANGE:  s1 s6 s7 s8 s9 s10 
+Instruction 	beq	s11,$0,$L159
+LIVERANGE:  s1 s6 s7 s8 s9 s11 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 
+Instruction 	lui	s12,%hi(inbuf)
+LIVERANGE:  s1 s6 s7 s8 s9 
+Instruction 	addiu	s13,s12,%lo(inbuf)
+LIVERANGE:  s1 s6 s7 s8 s9 s12 
+Instruction 	move	s14,s13
+LIVERANGE:  s1 s6 s7 s8 s9 s13 
+Instruction 	li	s15,-1			# 0xffffffffffffffff
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 
+Instruction 	lui	s16,%hi($LC2)
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 
+Instruction 	addiu	s17,s16,%lo($LC2)
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s16 
+Instruction 	lui	s18,%hi(ofname)
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 
+Instruction 	addiu	s19,s18,%lo(ofname)
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s18 
+Instruction 	move	s20,s14
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s24 
+Instruction 	move	s21,s7
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s24 
+Instruction 	move	s22,s20
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s21 s24 
+Instruction 	move	s23,s9
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s21 s22 s24 
+Instruction 	move	$4,s21
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s21 s22 s23 s24 
+Instruction 	move	$5,s22
+LIVERANGE:  $4 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s22 s23 s24 
+Instruction 	move	$6,s23
+LIVERANGE:  $4 $5 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s23 s24 
+Instruction 	move	$7,s24
+LIVERANGE:  $4 $5 $6 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s24 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 $7 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	move	s25,$2
+LIVERANGE:  $2 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	move	s26,s25
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s25 
+Instruction 	beq	s25,s9,$L166
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s25 s26 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	beq	s26,s15,$L167
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	subu	s9,s9,s26
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	addu	s20,s20,s26
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	move	s27,s7
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	move	s28,s20
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s27 
+Instruction 	move	s29,s9
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s27 s28 
+Instruction 	move	$4,s27
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s27 s28 s29 
+Instruction 	move	$5,s28
+LIVERANGE:  $4 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s28 s29 
+Instruction 	move	$6,s29
+LIVERANGE:  $4 $5 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s29 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	move	s30,$2
+LIVERANGE:  $2 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	move	s26,s30
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s30 
+Instruction 	bne	s30,s9,$L162
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 s30 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	lw	s31,%gp_rel(insize)($28)
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 
+Instruction 	lw	s32,%gp_rel(bytes_out)($28)
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 s31 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 s31 s32 
+Instruction 	addu	s33,s32,s31
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 s31 s32 
+Instruction 	sw	s33,%gp_rel(bytes_out)($28)
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 s33 
+Instruction 	move	s34,s13
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 
+Instruction 	li	s35,32768			# 0x8000
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 s34 
+Instruction 	move	$4,s1
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 s34 s35 
+Instruction 	move	$5,s34
+LIVERANGE:  $4 s1 s6 s7 s8 s13 s14 s15 s17 s19 s34 s35 
+Instruction 	move	$6,s35
+LIVERANGE:  $4 $5 s1 s6 s7 s8 s13 s14 s15 s17 s19 s35 
+Instruction 	jal	read
+LIVERANGE:  $4 $5 $6 s1 s6 s7 s8 s13 s14 s15 s17 s19 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s1 s6 s7 s8 s13 s14 s15 s17 s19 
+Instruction 	move	s36,$2
+LIVERANGE:  $2 s1 s6 s7 s8 s13 s14 s15 s17 s19 
+Instruction 	move	s9,s36
+LIVERANGE:  s1 s6 s7 s8 s13 s14 s15 s17 s19 s36 
+Instruction 	sw	s36,%gp_rel(insize)($28)
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s36 
+Instruction 	addiu	s37,s36,-1
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s36 
+Instruction 	sltu	s24,s37,-2
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s37 
+Instruction 	bne	s24,$0,$L160
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s24 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s24 
+Instruction 	li	s38,-1			# 0xffffffffffffffff
+LIVERANGE:  s6 s8 s9 s24 
+Instruction 	beq	s9,s38,$L168
+LIVERANGE:  s6 s8 s9 s24 s38 
+Instruction 	nop
+LIVERANGE:  s6 s8 s24 
+Instruction 	lw	s39,%gp_rel(bytes_out)($28)
+LIVERANGE:  s6 
+Instruction 	nop
+LIVERANGE:  s6 s39 
+Instruction 	sw	s39,%gp_rel(bytes_in)($28)
+LIVERANGE:  s6 s39 
+Instruction 	move	s40,$0
+LIVERANGE:  s6 
+Instruction 	addiu	$sp,$sp,64
+LIVERANGE:  s6 s40 
+Instruction 	move	$2,s40
+LIVERANGE:  s6 s40 
+Instruction 	j	s6
+LIVERANGE:  $2 s6 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	lw	s41,%gp_rel(stderr)($28)
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	move	s42,s17
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 s41 
+Instruction 	lw	s43,%gp_rel(progname)($28)
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 s41 s42 
+Instruction 	move	$4,s41
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 s41 s42 s43 
+Instruction 	move	$5,s42
+LIVERANGE:  $4 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 s42 s43 
+Instruction 	move	$6,s43
+LIVERANGE:  $4 $5 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 s43 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	move	s44,s19
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	move	$4,s44
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 s44 
+Instruction 	jal	perror
+LIVERANGE:  $4 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	nop
+LIVERANGE:  $4 s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	jal	abort_gzip
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	subu	s9,s9,s26
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	addu	s20,s20,s26
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 s26 
+Instruction 	j	$L169
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	nop
+LIVERANGE:  s1 s6 s7 s8 s9 s13 s14 s15 s17 s19 s20 
+Instruction 	lw	s45,0(s8)
+LIVERANGE:  s6 s8 s24 
+Instruction 	nop
+LIVERANGE:  s6 s24 s45 
+Instruction 	beq	s45,$0,$L164
+LIVERANGE:  s6 s24 s45 
+Instruction 	nop
+LIVERANGE:  s6 s24 
+Instruction 	move	$7,s24
+LIVERANGE:  s6 s24 
+Instruction 	jal	read_error
+LIVERANGE:  $7 s6 
+Instruction 	nop
+LIVERANGE:  $7 s6 
+Instruction 	j	$L164
+LIVERANGE:  s6 
+Instruction 	nop
+LIVERANGE:  s6 
+Instruction 	move	s1,$7
+LIVERANGE:  $7 $31 
+Instruction 	move	s2,$31
+LIVERANGE:  $31 s1 
+Instruction 	addiu	$sp,$sp,-48
+LIVERANGE:  s1 s2 
+Instruction 	lw	s3,%gp_rel(outcnt)($28)
+LIVERANGE:  s1 s2 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 
+Instruction 	bne	s3,$0,$L176
+LIVERANGE:  s1 s2 s3 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 
+Instruction 	addiu	$sp,$sp,48
+LIVERANGE:  s2 s4 
+Instruction 	move	$2,s4
+LIVERANGE:  s2 s4 
+Instruction 	j	s2
+LIVERANGE:  $2 s2 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	lw	s5,%gp_rel(ofd)($28)
+LIVERANGE:  s1 s2 s3 
+Instruction 	lui	s6,%hi(outbuf)
+LIVERANGE:  s1 s2 s3 s5 
+Instruction 	addiu	s7,s6,%lo(outbuf)
+LIVERANGE:  s1 s2 s3 s5 s6 
+Instruction 	li	s8,-1			# 0xffffffffffffffff
+LIVERANGE:  s1 s2 s3 s5 s7 
+Instruction 	lui	s9,%hi($LC2)
+LIVERANGE:  s1 s2 s3 s5 s7 s8 
+Instruction 	addiu	s10,s9,%lo($LC2)
+LIVERANGE:  s1 s2 s3 s5 s7 s8 s9 
+Instruction 	lui	s11,%hi(ofname)
+LIVERANGE:  s1 s2 s3 s5 s7 s8 s10 
+Instruction 	addiu	s12,s11,%lo(ofname)
+LIVERANGE:  s1 s2 s3 s5 s7 s8 s10 s11 
+Instruction 	move	s13,s5
+LIVERANGE:  s1 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	move	s14,s7
+LIVERANGE:  s1 s2 s3 s5 s7 s8 s10 s12 s13 
+Instruction 	move	s15,s3
+LIVERANGE:  s1 s2 s3 s5 s7 s8 s10 s12 s13 s14 
+Instruction 	move	$4,s13
+LIVERANGE:  s1 s2 s3 s5 s7 s8 s10 s12 s13 s14 s15 
+Instruction 	move	$5,s14
+LIVERANGE:  $4 s1 s2 s3 s5 s7 s8 s10 s12 s14 s15 
+Instruction 	move	$6,s15
+LIVERANGE:  $4 $5 s1 s2 s3 s5 s7 s8 s10 s12 s15 
+Instruction 	move	$7,s1
+LIVERANGE:  $4 $5 $6 s1 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 $7 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	move	s4,$2
+LIVERANGE:  $2 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	move	s16,s4
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s10 s12 
+Instruction 	beq	s4,s3,$L177
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s10 s12 s16 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s10 s12 s16 
+Instruction 	beq	s16,s8,$L178
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	nop
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	subu	s3,s3,s16
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	addu	s7,s7,s16
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	move	s17,s5
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 
+Instruction 	move	s18,s7
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s17 
+Instruction 	move	s19,s3
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s17 s18 
+Instruction 	move	$4,s17
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s17 s18 s19 
+Instruction 	move	$5,s18
+LIVERANGE:  $4 s2 s3 s5 s7 s8 s10 s12 s18 s19 
+Instruction 	move	$6,s19
+LIVERANGE:  $4 $5 s2 s3 s5 s7 s8 s10 s12 s19 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	move	s4,$2
+LIVERANGE:  $2 s2 s3 s5 s7 s8 s10 s12 
+Instruction 	move	s16,s4
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s10 s12 
+Instruction 	bne	s4,s3,$L174
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s10 s12 s16 
+Instruction 	nop
+LIVERANGE:  s2 s3 s4 s5 s7 s8 s10 s12 s16 
+Instruction 	lw	s20,%gp_rel(outcnt)($28)
+LIVERANGE:  s2 s4 
+Instruction 	lw	s21,%gp_rel(bytes_out)($28)
+LIVERANGE:  s2 s4 s20 
+Instruction 	nop
+LIVERANGE:  s2 s4 s20 s21 
+Instruction 	addu	s22,s21,s20
+LIVERANGE:  s2 s4 s20 s21 
+Instruction 	sw	s22,%gp_rel(bytes_out)($28)
+LIVERANGE:  s2 s4 s22 
+Instruction 	sw	$0,%gp_rel(outcnt)($28)
+LIVERANGE:  s2 s4 
+Instruction 	j	$L175
+LIVERANGE:  s2 s4 
+Instruction 	nop
+LIVERANGE:  s2 s4 
+Instruction 	lw	s23,%gp_rel(stderr)($28)
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	move	s24,s10
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 s23 
+Instruction 	lw	s25,%gp_rel(progname)($28)
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 s23 s24 
+Instruction 	move	$4,s23
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 s23 s24 s25 
+Instruction 	move	$5,s24
+LIVERANGE:  $4 s2 s3 s5 s7 s8 s10 s12 s16 s24 s25 
+Instruction 	move	$6,s25
+LIVERANGE:  $4 $5 s2 s3 s5 s7 s8 s10 s12 s16 s25 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	move	s26,s12
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	move	$4,s26
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 s26 
+Instruction 	jal	perror
+LIVERANGE:  $4 s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	nop
+LIVERANGE:  $4 s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	jal	abort_gzip
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	nop
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	subu	s3,s3,s16
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	addu	s7,s7,s16
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 s16 
+Instruction 	j	$L179
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 
+Instruction 	nop
+LIVERANGE:  s2 s3 s5 s7 s8 s10 s12 
+Instruction 	move	s1,$31
+LIVERANGE:  $31 
+Instruction 	addiu	$sp,$sp,-48
+LIVERANGE:  s1 
+Instruction 	lw	s2,%gp_rel(outcnt)($28)
+LIVERANGE:  s1 
+Instruction 	nop
+LIVERANGE:  s1 s2 
+Instruction 	move	s3,s2
+LIVERANGE:  s1 s2 
+Instruction 	beq	s2,$0,$L187
+LIVERANGE:  s1 s2 s3 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 
+Instruction 	lw	s4,%gp_rel(crc.2871)($28)
+LIVERANGE:  s1 s2 s3 
+Instruction 	lui	s5,%hi(window)
+LIVERANGE:  s1 s2 s3 s4 
+Instruction 	addiu	s6,s5,%lo(window)
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	lui	s7,%hi(crc_32_tab)
+LIVERANGE:  s1 s2 s3 s4 s5 s6 
+Instruction 	addiu	s8,s7,%lo(crc_32_tab)
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s7 
+Instruction 	addiu	s9,s2,-1
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s8 
+Instruction 	andi	s10,s9,0x3
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s8 s9 
+Instruction 	lbu	s11,%lo(window)(s5)
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s8 s9 s10 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s4 s6 s8 s9 s10 s11 
+Instruction 	xor	s12,s4,s11
+LIVERANGE:  s1 s2 s3 s4 s6 s8 s9 s10 s11 
+Instruction 	andi	s13,s12,0xff
+LIVERANGE:  s1 s2 s3 s4 s6 s8 s9 s10 s12 
+Instruction 	sll	s14,s13,2
+LIVERANGE:  s1 s2 s3 s4 s6 s8 s9 s10 s13 
+Instruction 	addu	s15,s14,s8
+LIVERANGE:  s1 s2 s3 s4 s6 s8 s9 s10 s14 
+Instruction 	lw	s16,0(s15)
+LIVERANGE:  s1 s2 s3 s4 s6 s8 s9 s10 s15 
+Instruction 	srl	s17,s4,8
+LIVERANGE:  s1 s2 s3 s4 s6 s8 s9 s10 s16 
+Instruction 	xor	s18,s16,s17
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s17 
+Instruction 	addiu	s19,s6,1
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 
+Instruction 	beq	s9,$0,$L202
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	beq	s10,$0,$L182
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	li	s20,1			# 0x1
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	beq	s10,s20,$L200
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 s20 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	li	s21,2			# 0x2
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s18 s19 
+Instruction 	beq	s10,s21,$L201
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s18 s19 s21 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 
+Instruction 	lbu	s22,1(s6)
+LIVERANGE:  s1 s2 s3 s6 s8 s18 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s22 
+Instruction 	xor	s23,s18,s22
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s22 
+Instruction 	andi	s24,s23,0xff
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s23 
+Instruction 	sll	s25,s24,2
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s24 
+Instruction 	addu	s26,s25,s8
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s25 
+Instruction 	lw	s27,0(s26)
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s26 
+Instruction 	srl	s28,s18,8
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s27 
+Instruction 	xor	s18,s27,s28
+LIVERANGE:  s1 s2 s3 s6 s8 s27 s28 
+Instruction 	addiu	s19,s6,2
+LIVERANGE:  s1 s2 s3 s6 s8 s18 
+Instruction 	addiu	s9,s2,-2
+LIVERANGE:  s1 s2 s3 s6 s8 s18 s19 
+Instruction 	lbu	s16,0(s19)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 
+Instruction 	xor	s29,s18,s16
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 
+Instruction 	andi	s30,s29,0xff
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 s29 
+Instruction 	sll	s31,s30,2
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 s30 
+Instruction 	addu	s32,s31,s8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 s31 
+Instruction 	lw	s33,0(s32)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 s32 
+Instruction 	srl	s34,s18,8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 s33 
+Instruction 	xor	s18,s33,s34
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s33 s34 
+Instruction 	addiu	s19,s19,1
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 
+Instruction 	addiu	s9,s9,-1
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 
+Instruction 	lbu	s10,0(s19)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s18 s19 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	xor	s35,s18,s10
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	andi	s36,s35,0xff
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 s35 
+Instruction 	sll	s37,s36,2
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 s36 
+Instruction 	addu	s38,s37,s8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 s37 
+Instruction 	lw	s39,0(s38)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 s38 
+Instruction 	srl	s40,s18,8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 s39 
+Instruction 	xor	s18,s39,s40
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s19 s39 s40 
+Instruction 	addiu	s19,s19,1
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	addiu	s9,s9,-1
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	beq	s9,$0,$L202
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	lbu	s41,0(s19)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 s41 
+Instruction 	xor	s42,s18,s41
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 s41 
+Instruction 	andi	s43,s42,0xff
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 s42 
+Instruction 	sll	s44,s43,2
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 s43 
+Instruction 	addu	s45,s44,s8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 s44 
+Instruction 	lw	s46,0(s45)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 s45 
+Instruction 	srl	s47,s18,8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s18 s19 s46 
+Instruction 	xor	s48,s46,s47
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s46 s47 
+Instruction 	lbu	s49,1(s19)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 s49 
+Instruction 	xor	s50,s48,s49
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 s49 
+Instruction 	andi	s51,s50,0xff
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 s50 
+Instruction 	sll	s52,s51,2
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 s51 
+Instruction 	addu	s53,s52,s8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 s52 
+Instruction 	lw	s54,0(s53)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 s53 
+Instruction 	srl	s55,s48,8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s48 s54 
+Instruction 	xor	s56,s54,s55
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s54 s55 
+Instruction 	lbu	s57,2(s19)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s56 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s56 s57 
+Instruction 	xor	s58,s56,s57
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s56 s57 
+Instruction 	andi	s59,s58,0xff
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s56 s58 
+Instruction 	sll	s60,s59,2
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s56 s59 
+Instruction 	addu	s16,s60,s8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s19 s56 s60 
+Instruction 	lw	s61,0(s16)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s56 
+Instruction 	srl	s62,s56,8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s56 s61 
+Instruction 	xor	s63,s61,s62
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s61 s62 
+Instruction 	lbu	s64,3(s19)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s63 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s63 s64 
+Instruction 	xor	s65,s63,s64
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s63 s64 
+Instruction 	andi	s66,s65,0xff
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s63 s65 
+Instruction 	sll	s67,s66,2
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s63 s66 
+Instruction 	addu	s68,s67,s8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s63 s67 
+Instruction 	lw	s10,0(s68)
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s16 s19 s63 s68 
+Instruction 	srl	s69,s63,8
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s19 s63 
+Instruction 	xor	s18,s10,s69
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s19 s69 
+Instruction 	addiu	s19,s19,4
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	addiu	s9,s9,-4
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	bne	s9,$0,$L182
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s8 s9 s10 s16 s18 s19 
+Instruction 	sw	s18,%gp_rel(crc.2871)($28)
+LIVERANGE:  s1 s2 s3 s6 s10 s16 s18 
+Instruction 	lw	s70,%gp_rel(test)($28)
+LIVERANGE:  s1 s2 s3 s6 s10 s16 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s10 s16 s70 
+Instruction 	beq	s70,$0,$L203
+LIVERANGE:  s1 s2 s3 s6 s10 s16 s70 
+Instruction 	nop
+LIVERANGE:  s1 s2 s3 s6 s10 s16 
+Instruction 	lw	s71,%gp_rel(bytes_out)($28)
+LIVERANGE:  s1 s2 s16 
+Instruction 	nop
+LIVERANGE:  s1 s2 s16 s71 
+Instruction 	addu	s72,s71,s2
+LIVERANGE:  s1 s2 s16 s71 
+Instruction 	sw	s72,%gp_rel(bytes_out)($28)
+LIVERANGE:  s1 s16 s72 
+Instruction 	sw	$0,%gp_rel(outcnt)($28)
+LIVERANGE:  s1 s16 
+Instruction 	addiu	$sp,$sp,48
+LIVERANGE:  s1 s16 
+Instruction 	move	$2,s16
+LIVERANGE:  s1 s16 
+Instruction 	j	s1
+LIVERANGE:  $2 s1 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	lw	s73,%gp_rel(ofd)($28)
+LIVERANGE:  s1 s3 s6 s10 
+Instruction 	move	s74,s6
+LIVERANGE:  s1 s3 s6 s10 s73 
+Instruction 	li	s75,-1			# 0xffffffffffffffff
+LIVERANGE:  s1 s3 s10 s73 s74 
+Instruction 	lui	s76,%hi($LC2)
+LIVERANGE:  s1 s3 s10 s73 s74 s75 
+Instruction 	addiu	s77,s76,%lo($LC2)
+LIVERANGE:  s1 s3 s10 s73 s74 s75 s76 
+Instruction 	lui	s78,%hi(ofname)
+LIVERANGE:  s1 s3 s10 s73 s74 s75 s77 
+Instruction 	addiu	s79,s78,%lo(ofname)
+LIVERANGE:  s1 s3 s10 s73 s74 s75 s77 s78 
+Instruction 	move	s80,s73
+LIVERANGE:  s1 s3 s10 s73 s74 s75 s77 s79 
+Instruction 	move	s81,s74
+LIVERANGE:  s1 s3 s10 s73 s74 s75 s77 s79 s80 
+Instruction 	move	s82,s3
+LIVERANGE:  s1 s3 s10 s73 s74 s75 s77 s79 s80 s81 
+Instruction 	move	$4,s80
+LIVERANGE:  s1 s3 s10 s73 s74 s75 s77 s79 s80 s81 s82 
+Instruction 	move	$5,s81
+LIVERANGE:  $4 s1 s3 s10 s73 s74 s75 s77 s79 s81 s82 
+Instruction 	move	$6,s82
+LIVERANGE:  $4 $5 s1 s3 s10 s73 s74 s75 s77 s79 s82 
+Instruction 	move	$7,s10
+LIVERANGE:  $4 $5 $6 s1 s3 s10 s73 s74 s75 s77 s79 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 $7 s1 s3 s73 s74 s75 s77 s79 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s1 s3 s73 s74 s75 s77 s79 
+Instruction 	move	s16,$2
+LIVERANGE:  $2 s1 s3 s73 s74 s75 s77 s79 
+Instruction 	move	s83,s16
+LIVERANGE:  s1 s3 s16 s73 s74 s75 s77 s79 
+Instruction 	beq	s16,s3,$L204
+LIVERANGE:  s1 s3 s16 s73 s74 s75 s77 s79 s83 
+Instruction 	nop
+LIVERANGE:  s1 s3 s16 s73 s74 s75 s77 s79 s83 
+Instruction 	beq	s83,s75,$L205
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	nop
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	subu	s3,s3,s83
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	addu	s74,s74,s83
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	move	s84,s73
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 
+Instruction 	move	s85,s74
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s84 
+Instruction 	move	s86,s3
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s84 s85 
+Instruction 	move	$4,s84
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s84 s85 s86 
+Instruction 	move	$5,s85
+LIVERANGE:  $4 s1 s3 s73 s74 s75 s77 s79 s85 s86 
+Instruction 	move	$6,s86
+LIVERANGE:  $4 $5 s1 s3 s73 s74 s75 s77 s79 s86 
+Instruction 	jal	write
+LIVERANGE:  $4 $5 $6 s1 s3 s73 s74 s75 s77 s79 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s1 s3 s73 s74 s75 s77 s79 
+Instruction 	move	s16,$2
+LIVERANGE:  $2 s1 s3 s73 s74 s75 s77 s79 
+Instruction 	move	s83,s16
+LIVERANGE:  s1 s3 s16 s73 s74 s75 s77 s79 
+Instruction 	bne	s16,s3,$L186
+LIVERANGE:  s1 s3 s16 s73 s74 s75 s77 s79 s83 
+Instruction 	nop
+LIVERANGE:  s1 s3 s16 s73 s74 s75 s77 s79 s83 
+Instruction 	lw	s2,%gp_rel(outcnt)($28)
+LIVERANGE:  s1 s16 
+Instruction 	j	$L183
+LIVERANGE:  s1 s2 s16 
+Instruction 	nop
+LIVERANGE:  s1 s2 s16 
+Instruction 	lw	s87,%gp_rel(stderr)($28)
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	move	s88,s77
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 s87 
+Instruction 	lw	s89,%gp_rel(progname)($28)
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 s87 s88 
+Instruction 	move	$4,s87
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 s87 s88 s89 
+Instruction 	move	$5,s88
+LIVERANGE:  $4 s1 s3 s73 s74 s75 s77 s79 s83 s88 s89 
+Instruction 	move	$6,s89
+LIVERANGE:  $4 $5 s1 s3 s73 s74 s75 s77 s79 s83 s89 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	move	s90,s79
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	move	$4,s90
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 s90 
+Instruction 	jal	perror
+LIVERANGE:  $4 s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	nop
+LIVERANGE:  $4 s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	jal	abort_gzip
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	nop
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	subu	s3,s3,s83
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	addu	s74,s74,s83
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 s83 
+Instruction 	j	$L206
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 
+Instruction 	nop
+LIVERANGE:  s1 s3 s73 s74 s75 s77 s79 
+Instruction 	move	s1,$4
+LIVERANGE:  $4 $5 $6 $7 $31 
+Instruction 	move	s2,$5
+LIVERANGE:  $5 $6 $7 $31 s1 
+Instruction 	move	s3,$6
+LIVERANGE:  $6 $7 $31 s1 s2 
+Instruction 	move	s4,$7
+LIVERANGE:  $7 $31 s1 s2 s3 
+Instruction 	move	s5,$31
+LIVERANGE:  $31 s1 s2 s3 s4 
+Instruction 	addiu	$sp,$sp,-56
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	s6,s1
+LIVERANGE:  s1 s2 s3 s4 s5 
+Instruction 	move	s7,s2
+LIVERANGE:  s1 s2 s3 s4 s5 s6 
+Instruction 	lw	s8,0(s1)
+LIVERANGE:  s1 s2 s3 s4 s5 s6 s7 
+Instruction 	move	s9,s3
+LIVERANGE:  s2 s3 s4 s5 s6 s7 s8 
+Instruction 	move	$4,s9
+LIVERANGE:  s2 s3 s4 s5 s6 s7 s8 s9 
+Instruction 	move	$5,s2
+LIVERANGE:  $4 s2 s3 s4 s5 s6 s7 s8 
+Instruction 	move	$6,s3
+LIVERANGE:  $4 $5 s3 s4 s5 s6 s7 s8 
+Instruction 	move	$7,s4
+LIVERANGE:  $4 $5 $6 s4 s5 s6 s7 s8 
+Instruction 	jal	getenv
+LIVERANGE:  $4 $5 $6 $7 s5 s6 s7 s8 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 s6 s7 s8 
+Instruction 	move	s10,$2
+LIVERANGE:  $2 s5 s6 s7 s8 
+Instruction 	move	s11,s10
+LIVERANGE:  s5 s6 s7 s8 s10 
+Instruction 	beq	s10,$0,$L208
+LIVERANGE:  s5 s6 s7 s8 s10 s11 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s10 s11 
+Instruction 	move	s12,s10
+LIVERANGE:  s5 s6 s7 s8 s10 s11 
+Instruction 	move	$4,s12
+LIVERANGE:  s5 s6 s7 s8 s11 s12 
+Instruction 	jal	strlen
+LIVERANGE:  $4 s5 s6 s7 s8 s11 
+Instruction 	nop
+LIVERANGE:  $4 s5 s6 s7 s8 s11 
+Instruction 	move	s13,$2
+LIVERANGE:  $2 s5 s6 s7 s8 s11 
+Instruction 	addiu	s14,s13,1
+LIVERANGE:  $2 s5 s6 s7 s8 s11 s13 
+Instruction 	move	$4,s14
+LIVERANGE:  $2 s5 s6 s7 s8 s11 s14 
+Instruction 	jal	malloc
+LIVERANGE:  $2 $4 s5 s6 s7 s8 s11 
+Instruction 	nop
+LIVERANGE:  $2 $4 s5 s6 s7 s8 s11 
+Instruction 	move	s15,$2
+LIVERANGE:  $2 s5 s6 s7 s8 s11 
+Instruction 	move	s16,s15
+LIVERANGE:  s5 s6 s7 s8 s11 s15 
+Instruction 	beq	s15,$0,$L266
+LIVERANGE:  s5 s6 s7 s8 s11 s15 s16 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s16 
+Instruction 	move	s17,s16
+LIVERANGE:  s5 s6 s7 s8 s11 s16 
+Instruction 	move	s18,s11
+LIVERANGE:  s5 s6 s7 s8 s11 s17 
+Instruction 	move	$4,s17
+LIVERANGE:  s5 s6 s7 s8 s17 s18 
+Instruction 	move	$5,s18
+LIVERANGE:  $4 s5 s6 s7 s8 s18 
+Instruction 	jal	strcpy
+LIVERANGE:  $4 $5 s5 s6 s7 s8 
+Instruction 	nop
+LIVERANGE:  $4 $5 s5 s6 s7 s8 
+Instruction 	move	s19,$2
+LIVERANGE:  $2 s5 s6 s7 s8 
+Instruction 	move	s11,s19
+LIVERANGE:  s5 s6 s7 s8 s19 
+Instruction 	lb	s20,0(s19)
+LIVERANGE:  s5 s6 s7 s8 s11 s19 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s20 
+Instruction 	beq	s20,$0,$L210
+LIVERANGE:  s5 s6 s7 s8 s11 s20 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 
+Instruction 	move	s21,s11
+LIVERANGE:  s5 s6 s7 s8 s11 
+Instruction 	move	s22,$0
+LIVERANGE:  s5 s6 s7 s8 s11 s21 
+Instruction 	li	s23,32			# 0x20
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 
+Instruction 	li	s24,9			# 0x9
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 
+Instruction 	li	s25,32			# 0x20
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 
+Instruction 	li	s26,9			# 0x9
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 
+Instruction 	move	s27,$0
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 
+Instruction 	addu	s28,s21,s27
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 
+Instruction 	lb	s29,0(s28)
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 s28 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 s28 s29 
+Instruction 	beq	s29,s23,$L212
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 s28 s29 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 s28 s29 
+Instruction 	bne	s29,s24,$L267
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 s28 s29 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 s28 s29 
+Instruction 	addiu	s27,s27,1
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 
+Instruction 	j	$L219
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s27 
+Instruction 	move	s30,s28
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s28 s29 
+Instruction 	beq	s29,$0,$L213
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s28 s29 s30 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s28 s29 s30 
+Instruction 	beq	s29,s25,$L214
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s29 s30 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s29 s30 
+Instruction 	beq	s29,s26,$L214
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s29 s30 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s30 
+Instruction 	move	s31,$0
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 
+Instruction 	j	$L216
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 
+Instruction 	beq	s32,s23,$L215
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s32 s33 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s32 s33 
+Instruction 	beq	s32,s24,$L215
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s32 s33 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s33 
+Instruction 	addiu	s31,s31,1
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 
+Instruction 	addu	s33,s28,s31
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 
+Instruction 	lb	s32,0(s33)
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s33 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s32 s33 
+Instruction 	bne	s32,$0,$L268
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s32 s33 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s28 s31 s32 s33 
+Instruction 	move	s30,s33
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s33 
+Instruction 	lb	s34,0(s33)
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s30 s33 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s30 s34 
+Instruction 	bne	s34,$0,$L214
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s30 s34 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s30 
+Instruction 	addiu	s22,s22,1
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s24 
+Instruction 	lw	s35,0(s6)
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s24 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s24 s35 
+Instruction 	addu	s36,s22,s35
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s24 s35 
+Instruction 	sw	s36,0(s6)
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s24 s35 s36 
+Instruction 	addiu	s37,s36,1
+LIVERANGE:  s5 s7 s8 s11 s22 s24 s35 s36 
+Instruction 	li	s38,4			# 0x4
+LIVERANGE:  s5 s7 s8 s11 s22 s24 s35 s37 
+Instruction 	move	$4,s37
+LIVERANGE:  s5 s7 s8 s11 s22 s24 s35 s37 s38 
+Instruction 	move	$5,s38
+LIVERANGE:  $4 s5 s7 s8 s11 s22 s24 s35 s38 
+Instruction 	move	$6,s35
+LIVERANGE:  $4 $5 s5 s7 s8 s11 s22 s24 s35 
+Instruction 	move	$7,s24
+LIVERANGE:  $4 $5 $6 s5 s7 s8 s11 s22 s24 
+Instruction 	jal	calloc
+LIVERANGE:  $4 $5 $6 $7 s5 s7 s8 s11 s22 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 s7 s8 s11 s22 
+Instruction 	move	s39,$2
+LIVERANGE:  $2 s5 s7 s8 s11 s22 
+Instruction 	move	s40,s39
+LIVERANGE:  s5 s7 s8 s11 s22 s39 
+Instruction 	beq	s39,$0,$L269
+LIVERANGE:  s5 s7 s8 s11 s22 s39 s40 
+Instruction 	nop
+LIVERANGE:  s5 s7 s8 s11 s22 s40 
+Instruction 	lw	s41,0(s7)
+LIVERANGE:  s5 s7 s8 s11 s22 s40 
+Instruction 	sw	s40,0(s7)
+LIVERANGE:  s5 s7 s8 s11 s22 s40 s41 
+Instruction 	addiu	s42,s8,-1
+LIVERANGE:  s5 s8 s11 s22 s40 s41 
+Instruction 	bltz	s8,$L270
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	lw	s43,0(s41)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s43 
+Instruction 	sw	s43,0(s40)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s43 
+Instruction 	addiu	s44,s40,4
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	move	s45,s11
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 
+Instruction 	move	s46,s44
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 
+Instruction 	move	s47,s22
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 
+Instruction 	li	s48,32			# 0x20
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 
+Instruction 	li	s49,9			# 0x9
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 
+Instruction 	move	s50,$0
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 
+Instruction 	addu	s51,s45,s50
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 
+Instruction 	lb	s52,0(s51)
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 s51 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 s51 s52 
+Instruction 	beq	s52,s48,$L224
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 s51 s52 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 s51 s52 
+Instruction 	bne	s52,s49,$L271
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 s51 s52 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 s51 
+Instruction 	addiu	s50,s50,1
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 
+Instruction 	j	$L228
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s50 
+Instruction 	move	s45,s51
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s46 s47 s48 s49 s51 
+Instruction 	sw	s51,0(s46)
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s51 
+Instruction 	addiu	s46,s46,4
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 
+Instruction 	lb	s53,0(s45)
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 
+Instruction 	addiu	s45,s45,1
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s53 
+Instruction 	bne	s53,$0,$L225
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 s53 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 
+Instruction 	addiu	s47,s47,-1
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 
+Instruction 	bne	s47,$0,$L223
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 s45 s46 s47 s48 s49 
+Instruction 	sll	s54,s22,2
+LIVERANGE:  s5 s8 s11 s22 s41 s42 s44 
+Instruction 	addu	s55,s44,s54
+LIVERANGE:  s5 s8 s11 s41 s42 s44 s54 
+Instruction 	beq	s42,$0,$L227
+LIVERANGE:  s5 s8 s11 s41 s42 s55 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s42 s55 
+Instruction 	li	s56,-1			# 0xffffffffffffffff
+LIVERANGE:  s5 s8 s11 s41 s42 s55 
+Instruction 	addiu	s57,s42,-1
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 
+Instruction 	andi	s58,s57,0x7
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 s57 
+Instruction 	lw	s59,4(s41)
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 s58 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 s58 s59 
+Instruction 	sw	s59,0(s55)
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 s58 s59 
+Instruction 	addiu	s60,s55,4
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 s58 
+Instruction 	addiu	s61,s41,8
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 s58 s60 
+Instruction 	addiu	s62,s42,-2
+LIVERANGE:  s5 s8 s11 s41 s42 s55 s56 s58 s60 s61 
+Instruction 	beq	s62,s56,$L265
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	beq	s58,$0,$L229
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	li	s63,1			# 0x1
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	beq	s58,s63,$L259
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 s63 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	li	s64,2			# 0x2
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	beq	s58,s64,$L260
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 s64 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	li	s65,3			# 0x3
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	beq	s58,s65,$L261
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 s65 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	li	s66,4			# 0x4
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	beq	s58,s66,$L262
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 s66 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	li	s67,5			# 0x5
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	beq	s58,s67,$L263
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 s67 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	li	s68,6			# 0x6
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 
+Instruction 	beq	s58,s68,$L264
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s58 s60 s61 s62 s68 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s60 s61 s62 
+Instruction 	lw	s69,8(s41)
+LIVERANGE:  s5 s8 s11 s41 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s69 
+Instruction 	sw	s69,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s69 
+Instruction 	addiu	s60,s60,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-1
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	lw	s70,0(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s70 
+Instruction 	sw	s70,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s70 
+Instruction 	addiu	s60,s60,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-1
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	lw	s71,0(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s71 
+Instruction 	sw	s71,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s71 
+Instruction 	addiu	s60,s60,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-1
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	lw	s72,0(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s72 
+Instruction 	sw	s72,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s72 
+Instruction 	addiu	s60,s60,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-1
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	lw	s73,0(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s73 
+Instruction 	sw	s73,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s73 
+Instruction 	addiu	s60,s60,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-1
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	lw	s74,0(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s74 
+Instruction 	sw	s74,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s74 
+Instruction 	addiu	s60,s60,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-1
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	lw	s75,0(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s75 
+Instruction 	sw	s75,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s75 
+Instruction 	addiu	s60,s60,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,4
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-1
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	beq	s62,s56,$L265
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	lw	s76,0(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s76 
+Instruction 	sw	s76,0(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s76 
+Instruction 	lw	s77,4(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s77 
+Instruction 	sw	s77,4(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s77 
+Instruction 	lw	s78,8(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s78 
+Instruction 	sw	s78,8(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s78 
+Instruction 	lw	s79,12(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s79 
+Instruction 	sw	s79,12(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s79 
+Instruction 	lw	s80,16(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s80 
+Instruction 	sw	s80,16(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s80 
+Instruction 	lw	s81,20(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s81 
+Instruction 	sw	s81,20(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s81 
+Instruction 	lw	s82,24(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s82 
+Instruction 	sw	s82,24(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s82 
+Instruction 	lw	s83,28(s61)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s83 
+Instruction 	sw	s83,28(s60)
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 s83 
+Instruction 	addiu	s60,s60,32
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s61,s61,32
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s62,s62,-8
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	bne	s62,s56,$L229
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s55 s56 s60 s61 s62 
+Instruction 	addiu	s84,s8,-1
+LIVERANGE:  s5 s8 s11 s55 
+Instruction 	sll	s85,s84,2
+LIVERANGE:  s5 s11 s55 s84 
+Instruction 	addu	s55,s55,s85
+LIVERANGE:  s5 s11 s55 s85 
+Instruction 	sw	$0,0(s55)
+LIVERANGE:  s5 s11 s55 
+Instruction 	move	s86,s11
+LIVERANGE:  s5 s11 
+Instruction 	addiu	$sp,$sp,56
+LIVERANGE:  s5 s86 
+Instruction 	move	$2,s86
+LIVERANGE:  s5 s86 
+Instruction 	j	s5
+LIVERANGE:  $2 s5 
+Instruction 	nop
+LIVERANGE:  $2 
+Instruction 	sb	$0,0(s30)
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s30 
+Instruction 	addiu	s21,s30,1
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s23 s24 s25 s26 s30 
+Instruction 	addiu	s22,s22,1
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s30 
+Instruction 	lb	s87,1(s30)
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s30 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s87 
+Instruction 	bne	s87,$0,$L211
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 s87 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 s25 s26 
+Instruction 	j	$L218
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s24 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s22 s24 
+Instruction 	bne	s22,$0,$L218
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s21 s22 s23 s24 
+Instruction 	move	s88,s11
+LIVERANGE:  s5 s11 s21 s23 s24 
+Instruction 	move	$4,s88
+LIVERANGE:  s5 s21 s23 s24 s88 
+Instruction 	move	$5,s21
+LIVERANGE:  $4 s5 s21 s23 s24 
+Instruction 	move	$6,s23
+LIVERANGE:  $4 $5 s5 s23 s24 
+Instruction 	move	$7,s24
+LIVERANGE:  $4 $5 $6 s5 s24 
+Instruction 	jal	free
+LIVERANGE:  $4 $5 $6 $7 s5 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 
+Instruction 	move	s11,$0
+LIVERANGE:  s5 
+Instruction 	j	$L208
+LIVERANGE:  s5 s11 
+Instruction 	nop
+LIVERANGE:  s5 s11 
+Instruction 	lui	s89,%hi($LC6)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	addiu	s90,s89,%lo($LC6)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s89 
+Instruction 	sw	s90,16($sp)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s90 
+Instruction 	lw	s91,%gp_rel(stderr)($28)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	lui	s92,%hi($LC3)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s91 
+Instruction 	addiu	s93,s92,%lo($LC3)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s91 s92 
+Instruction 	lw	s94,%gp_rel(progname)($28)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s91 s93 
+Instruction 	lui	s95,%hi(ifname)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s91 s93 s94 
+Instruction 	addiu	s96,s95,%lo(ifname)
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s91 s93 s94 s95 
+Instruction 	move	$4,s91
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 s91 s93 s94 s96 
+Instruction 	move	$5,s93
+LIVERANGE:  $4 s5 s8 s11 s22 s40 s41 s42 s93 s94 s96 
+Instruction 	move	$6,s94
+LIVERANGE:  $4 $5 s5 s8 s11 s22 s40 s41 s42 s94 s96 
+Instruction 	move	$7,s96
+LIVERANGE:  $4 $5 $6 s5 s8 s11 s22 s40 s41 s42 s96 
+Instruction 	jal	fprintf
+LIVERANGE:  $4 $5 $6 $7 s5 s8 s11 s22 s40 s41 s42 
+Instruction 	nop
+LIVERANGE:  $4 $5 $6 $7 s5 s8 s11 s22 s40 s41 s42 
+Instruction 	jal	abort_gzip
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	j	$L222
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	nop
+LIVERANGE:  s5 s8 s11 s22 s40 s41 s42 
+Instruction 	lui	s97,%hi($LC4)
+LIVERANGE:  s5 s6 s7 s8 s11 s16 
+Instruction 	addiu	s98,s97,%lo($LC4)
+LIVERANGE:  s5 s6 s7 s8 s11 s16 s97 
+Instruction 	move	$4,s98
+LIVERANGE:  s5 s6 s7 s8 s11 s16 s98 
+Instruction 	jal	error
+LIVERANGE:  $4 s5 s6 s7 s8 s11 s16 
+Instruction 	nop
+LIVERANGE:  $4 s5 s6 s7 s8 s11 s16 
+Instruction 	j	$L209
+LIVERANGE:  s5 s6 s7 s8 s11 s16 
+Instruction 	nop
+LIVERANGE:  s5 s6 s7 s8 s11 s16 
+Instruction 	lui	s99,%hi($LC4)
+LIVERANGE:  s5 s7 s8 s11 s22 s40 
+Instruction 	addiu	s100,s99,%lo($LC4)
+LIVERANGE:  s5 s7 s8 s11 s22 s40 s99 
+Instruction 	move	$4,s100
+LIVERANGE:  s5 s7 s8 s11 s22 s40 s99 s100 
+Instruction 	move	$7,s99
+LIVERANGE:  $4 s5 s7 s8 s11 s22 s40 s99 
+Instruction 	jal	error
+LIVERANGE:  $4 $7 s5 s7 s8 s11 s22 s40 
+Instruction 	nop
+LIVERANGE:  $4 $7 s5 s7 s8 s11 s22 s40 
+Instruction 	j	$L221
+LIVERANGE:  s5 s7 s8 s11 s22 s40 
+Instruction 	nop
+LIVERANGE:  s5 s7 s8 s11 s22 s40 
